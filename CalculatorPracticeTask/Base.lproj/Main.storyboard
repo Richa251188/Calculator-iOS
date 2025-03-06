@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalculatorPracticeTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BFC-fX-nyS">
+                                <rect key="frame" x="16" y="386" width="361" height="432"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="432" id="oIF-nm-w1R"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="19h-e9-Xe6">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalculatorButtonCell" id="JHz-Mf-olp" customClass="CalculatorButtonCell" customModule="CalculatorPracticeTask" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bdw-WT-f6j">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TlK-4p-Pew">
+                                <rect key="frame" x="16" y="332" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4f-g9-aPw">
+                                <rect key="frame" x="16" y="278" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BFC-fX-nyS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C0x-EO-SMc"/>
+                            <constraint firstItem="TlK-4p-Pew" firstAttribute="trailing" secondItem="BFC-fX-nyS" secondAttribute="trailing" id="EEC-xa-QPr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BFC-fX-nyS" secondAttribute="trailing" constant="16" id="EXm-Id-KKv"/>
+                            <constraint firstItem="TlK-4p-Pew" firstAttribute="top" secondItem="t4f-g9-aPw" secondAttribute="bottom" constant="20" id="RXX-bv-5m1"/>
+                            <constraint firstItem="t4f-g9-aPw" firstAttribute="leading" secondItem="TlK-4p-Pew" secondAttribute="leading" id="USg-Wp-ybN"/>
+                            <constraint firstItem="TlK-4p-Pew" firstAttribute="leading" secondItem="BFC-fX-nyS" secondAttribute="leading" id="Vkf-nK-O5g"/>
+                            <constraint firstItem="BFC-fX-nyS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wKL-SN-VyX"/>
+                            <constraint firstItem="BFC-fX-nyS" firstAttribute="top" secondItem="TlK-4p-Pew" secondAttribute="bottom" constant="20" id="x0H-Ty-tWA"/>
+                            <constraint firstItem="BFC-fX-nyS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xi7-c4-fgC"/>
+                            <constraint firstItem="t4f-g9-aPw" firstAttribute="trailing" secondItem="TlK-4p-Pew" secondAttribute="trailing" id="yuf-fA-HEI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonsCollectionView" destination="BFC-fX-nyS" id="QcG-PD-XlB"/>
+                        <outlet property="calculationTextField" destination="t4f-g9-aPw" id="L4z-R1-68j"/>
+                        <outlet property="resultTextField" destination="TlK-4p-Pew" id="YqJ-lf-hcd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
